@@ -21,6 +21,12 @@
                             <span class="nav-text">Espace SM</span>
                         </a>
                     </li>
+                    <li class="nav-item @if(Session::get('lien') == '/admin/users') active @endif">
+                        <a class="nav-item-hold" href="{{route('admin')}}">
+                            <i class="fas fa-2x fa-users" aria-hidden="true"></i>
+                            <span class="nav-text">Menu Admin</span>
+                        </a>
+                    </li>
                 {{-- @endif --}}
             @endif
             <li class="nav-item">

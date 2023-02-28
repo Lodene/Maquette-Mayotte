@@ -21,15 +21,16 @@
 
         <div class="d-flex align-items-center">
 
-            <div class="logo">
+            <div class="logo ml-5">
                 <a href="#" title="Retour à l'accueil">
-                    <img src="{{ asset('images/logo.png') }}" class="logo-img" alt="">
+                    <h1 style="font-size: 30px; width: 400px; margin-bottom: 0;">Rectorat Mayotte </h1>
+                    <h1 style="font-size: 30px; width: 450px">- pôle immobilier et logistique</h1>
                 </a>
             </div>
             <!-- Mega menu -->
             <div id="titre-application">
 
-                <div class="app-title"><a href="#"   title="Retour à l'accueil" style="color:#000 !important;">{{ env('APP_NAME') }}</a></div>
+                <h1 class="mt-4 reduceMobile" style="margin-left: 300px">{{ env('APP_NAME') }}</h1>
 
 
             </div>

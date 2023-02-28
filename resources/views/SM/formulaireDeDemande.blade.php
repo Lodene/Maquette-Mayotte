@@ -5,7 +5,7 @@
     <div class="header">
         <p>Nouvelle Demande</p>
     </div>
-    {{-- <div class="">{{dd($data)}} --}}
+    {{-- <div class="">{{dump($data['Statut'])}} --}}
     <div class="row">
         <div class="col-md-4">
             <div class="form-group mt-4">
@@ -17,7 +17,7 @@
             <div class="form-group mt-4">
                 <div class="">
                     <div> <label for="besoin">Statut : </label> </div>
-                    <div> <input type="text" class="form-control" name="besoin" id="besoin" value={{ $data['Statut']}}> </div>
+                    <div> <input type="text" class="form-control" name="statut" id="" value={{ $data['Statut']}}> </div>
                 </div>
             </div>
             <div class="form-group mt-4">

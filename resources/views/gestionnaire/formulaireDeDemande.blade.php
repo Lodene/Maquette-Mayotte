@@ -45,7 +45,7 @@
             </div>
                     
             <div class="col-md-12 mt-5">
-                <button type="submit" class="btn btn-primary">Valider</button>
+                <button type="submit" class="btn btn-primary">Envoyer</button>
                 <a href="#"  class="btn btn-primary">Laisser comme brouillon</a>
             </div>
             </div>

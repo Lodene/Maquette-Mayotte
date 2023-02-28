@@ -34,7 +34,7 @@
                     </tr>
                     @foreach ($data as $exemple)
                     <?php 
-                        if ($exemple['Statut'] == "En cours"){
+                        if ($exemple['Statut'] == "En cours" || $exemple['Statut'] == "Terminé" ){
                             $action = false;
                         } else {
                             $action = true;

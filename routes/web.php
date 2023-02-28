@@ -5,6 +5,7 @@ use App\Http\Controllers\GestionnaireController;
 use App\Http\Controllers\RddController;
 use App\Http\Controllers\SmController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\AdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -50,4 +51,8 @@ Route::get('/Demande/{id?}', [SmController::class, 'formulaireDeDemande']);
 Route::post('/Logout', [AuthController::class, 'logout'] )->name('logout');
 Route::get('/login', [AuthController::class, 'login'] )->name('login');
 Route::post('/loginWithData', [AuthController::class, 'loginWithData'] )->name('loginWithData');
+
+// Admin
+Route::get('/adminPage', [AdminController::class, 'menu'] )->name('admin');
+
 

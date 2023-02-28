@@ -61,10 +61,11 @@
         </div>
         <div class="logo ml-5">
             <a href="#" title="Retour à l'accueil">
-                <h1 style="font-size: 30px">Rectorat Mayotte </h1>
+                <h1 style="font-size: 30px; width: 400px; margin-bottom: 0;">Rectorat Mayotte - </h1>
+                <h1 style="font-size: 30px; width: 400px">pôle immobilier et logistique</h1>
             </a>
         </div>
-        <h1 class="mt-4 reduceMobile">{{ env('APP_NAME') }}</h1>
+        <h1 class="mt-4 reduceMobile" style="margin-left: 300px">{{ env('APP_NAME') }}</h1>
         <p style="color:#1d3d74; right:30px; top:10px; text-align:center;" class="position-absolute mt-4 pseudoHidden">
             <span class="hiddenMobile">Connecté en tant que</span>
             {{-- <strong>{{ auth()->user()->name }}</strong> --}}
