@@ -1,0 +1,13 @@
+tr, td {
+    border:1px solid black;
+    margin:0;
+}
+
+.thead {
+    background-color:#0070c0;
+    color:#ffffff;
+}
+
+.trow {
+    background-color:#ffffff;
+}

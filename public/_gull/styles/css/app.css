@@ -1,0 +1,285 @@
+table.dataTable td {
+    padding: 3px 10px;
+    width: 1px;
+    white-space: nowrap;
+}
+
+@media screen and (max-width: 580px) {
+    .logo-img{ height: 70px !important;}
+}
+
+@media screen and (max-width: 1232px) {
+    .app-title-logged{ display: none;}
+}
+
+@media screen and (max-width: 655px) {
+    .bonjour{ display: none;}
+}
+
+@media screen and (max-width: 1080px) {
+    #titre-application{ display: none;}
+}
+
+@media screen and (max-width: 620px) {
+    #header-moteur-recherche{ display: none;}
+}
+
+ul.checkbox li {
+    border: 1px transparent solid;
+    display:inline-block;
+    width:24em;
+}
+
+#entretien .form-control {
+    /*background-color: rgba(49, 214, 49, 0.4);*/
+    color: #000 !important;
+    opacity:1;
+    font-size: medium;
+}
+#entretien .form-control:disabled, .form-control[readonly]{
+    background-color: #e5e5e5 !important;
+    font-size: inherit;
+    color: #000 !important;
+}
+
+h3, h2{
+    color: #1D3D74;
+    font-weight: bolder;
+}
+
+.form-group label{
+    color: #000;
+}
+
+
+@media print {
+    .col-print-1 {
+        width: 8%;
+        float: left;
+    }
+
+    .col-print-2 {
+        width: 16%;
+        float: left;
+    }
+
+    .col-print-3 {
+        width: 25%;
+        float: left;
+    }
+
+    .col-print-4 {
+        width: 33%;
+        float: left;
+    }
+
+    .col-print-5 {
+        width: 42%;
+        float: left;
+    }
+
+    .col-print-6 {
+        width: 50%;
+        float: left;
+    }
+
+    .col-print-7 {
+        width: 58%;
+        float: left;
+    }
+
+    .col-print-8 {
+        width: 66%;
+        float: left;
+    }
+
+    .col-print-9 {
+        width: 75%;
+        float: left;
+    }
+
+    .col-print-10 {
+        width: 83%;
+        float: left;
+    }
+
+    .col-print-11 {
+        width: 92%;
+        float: left;
+    }
+
+    .col-print-12 {
+        width: 100%;
+        float: left;
+    }
+
+    hr {
+        margin-top: 0.3rem;
+        margin-bottom: 0.3rem;
+    }
+
+    .form-control {
+        border: none;
+    }
+
+    label{
+        font-weight: bolder;
+    }
+
+} /* /media print */
+
+
+.red{
+    color: red;
+}
+
+.card-body{
+    padding-top: 1rem !important;
+}
+.nav-tabs .nav-item .nav-link{
+    padding: 8px !important;
+
+}
+
+#table-activites th, #table-activites td{
+    padding: 4px !important;
+    border-left: 1px solid grey;
+    border-bottom: 1px solid grey;
+}
+
+#table-activites th:first-child{
+    border-left: none;
+}
+#table-activites th:last-child{
+    border-right: 1px solid grey;
+}
+
+.center{
+    text-align:center;
+}
+.txt-left{
+    text-align:left !important;
+}
+.table-center th, . table-center td, .col{
+    text-align:center !important;
+}
+h2{
+    margin-bottom: 3px;
+}
+
+.card-login{
+    margin-top: 180px;
+}
+
+.btn-excel{
+    color: #fff;
+    background-color: #28a745;
+    border-color: #28a745;
+}
+.btn-excel:hover {
+    color: #fff;
+    background-color: #218838;
+    border-color: #1e7e34;
+}
+.btn-excel.focus, .btn-excel:focus {
+    box-shadow: 0 0 0 0.2rem rgba(40,167,69,.5);
+}
+
+.form-group label {
+    font-size: 0.9rem;
+    color: #1D3D74;
+    margin-bottom: 4px;
+}
+.form-group label span {
+
+}
+
+.texte {
+    font-size: 0.9rem;
+    color: #000000;
+    margin-bottom: 4px;
+    display:inline;
+    font-weight: 700;
+    margin-left: 10px;
+}
+
+body {
+    margin: 0;
+    font-family: "Nunito", sans-serif;
+    font-size: 0.9rem;
+    font-weight: 400;
+    line-height: 1.2;
+    color: #47404f;
+    text-align: left;
+    background-color: #fff; }
+
+.form-group {
+    margin-bottom: 0px;
+}
+
+#entretien .form-control {
+    font-size: 0.9rem;
+}
+.form-control > select{
+    padding: 0 !important;
+}
+
+.table td .p-2{
+    padding-top: 5px !important;
+}
+.table td {
+    padding: 0 !important;
+    padding-top: 10px !important;
+}
+
+.blanc{
+    color:#FFFFFF !important;
+}
+
+a:visited{
+    color:#FFFFFF !important;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: black;opacity: 1;
+}
+::-moz-placeholder { /* Firefox 19+ */
+    color: black;opacity: 1;
+}
+:-ms-input-placeholder { /* IE 10+ */
+    color: black;opacity: 1;
+}
+:-moz-placeholder { /* Firefox 18- */
+    color: black;opacity: 1;
+}
+h2{
+    background-color: #1D3D74;
+    color: #FFFFFF;
+    padding: 5px;
+    font-size: 1.3rem;
+}
+
+h3 {
+    font-size: 1.2rem;
+}
+
+h4 {
+    font-size: 1rem;
+}
+
+hr {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+p{
+    font-size: 0.9rem;
+}
+
+.hide{
+    display:none;
+}
+
+.table td {
+    text-align: center !important;
+}
