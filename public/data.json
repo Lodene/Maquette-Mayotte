@@ -43,7 +43,7 @@
     },
     {
         "Id": 3,
-        "Zone": "Sud",
+        "Zone": "Nord",
         "Etablissement": "LPO DEMBENI (zone Sud)",
         "Date": "28-janv.-22",
         "Numéro_de_devis": "DEVIS EN COURS",
@@ -64,7 +64,7 @@
     },
     {
         "Id": 4,
-        "Zone": "Sud",
+        "Zone": "Est",
         "Numéro_de_devis": "2022-214-LC-602",
         "Etablissement": "LPO DEMBENI (zone Sud)",
         "Date": "28-janv.-22",

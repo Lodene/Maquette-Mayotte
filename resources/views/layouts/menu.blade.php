@@ -21,8 +21,8 @@
                             <span class="nav-text">Espace SM</span>
                         </a>
                     </li>
-                    <li class="nav-item @if(Session::get('lien') == '/admin/users') active @endif">
-                        <a class="nav-item-hold" href="{{route('admin')}}">
+                    <li class="nav-item @if(Session::get('lien') == '/admin/users') active @endif"  data-item="Admin" >
+                        <a class="nav-item-hold">
                             <i class="fas fa-2x fa-users" aria-hidden="true"></i>
                             <span class="nav-text">Menu Admin</span>
                         </a>
@@ -97,6 +97,19 @@
                         </span>
                     </a>
                     <a href="{{ route('SM.listeDemande') }}"><i class="fa fa-list" style="color:black;"></i><span class="item-name p-3">Liste des Demandes</span></a>
+                    
+                </li>
+            </ul>
+            <ul class="childNav" data-parent="Admin">
+                <li class="nav-item">
+                
+                    <a style="cursor:text; background-color:#eeefef;">
+                        <span class="item-name mx-auto text-center my-3">
+                            -- Listes --
+                        </span>
+                    </a>
+                    <a href="/adminPage/Etablissement"><i class="fa fa-list" style="color:black;"></i><span class="item-name p-3">Etablissement</span></a>
+                    <a href="/adminPage/Zone"><i class="fa fa-list" style="color:black;"></i><span class="item-name p-3">Zone</span></a>
                     
                 </li>
             </ul>

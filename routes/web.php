@@ -53,6 +53,6 @@ Route::get('/login', [AuthController::class, 'login'] )->name('login');
 Route::post('/loginWithData', [AuthController::class, 'loginWithData'] )->name('loginWithData');
 
 // Admin
-Route::get('/adminPage', [AdminController::class, 'menu'] )->name('admin');
+Route::get('/adminPage/{item?}', [AdminController::class, 'menu'] );
 
 

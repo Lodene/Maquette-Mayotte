@@ -1,53 +1,48 @@
 @extends('layouts.app')
 @section('title', 'Menu admin')
 @section('content')
-<div class="main-content-wrap sidenav-open d-flex flex-column content-center" style="margin-top: 100px">
-    <h2>Menu Admin</h2>
-    {{-- {{dd($datas)}} --}}
-    <div class="mt-3">
-        <p class="" style="align-item: center">Zone : </p>
-        <div class="d-flex ml-5 mt-3">
-            @foreach ($datas as $data)
-                <p class="mr-1">{{$data['Zone']}}</p>
-                <a href="#"><i class="fas fa-trash-alt mr-5"></i></a>
-                <?php break ?>
-            @endforeach
-        </div>
-        <div class="d-flex">
-            <input type="text" class="form-control" placeholder="Ajouter un élément" style="width: 150px">
-            <button type="submit" class="btn btn-primary">Valider</button>
-        </div>
-    </div>
-    <div class="mt-3">
-        <p class="">Etablissement :</p>
-        <div class="d-flex ml-5">
-            @foreach ($datas as $data)
-                <p class="mr-1">{{$data['Etablissement']}}</p>
-                <a href="#"><i class="fas fa-trash-alt mr-5"></i></a>
-                <?php break ?>
-            @endforeach
-        </div>
-        <div class="d-flex">
-            <input type="text" class="form-control" placeholder="Ajouter un élément" style="width: 150px">
-            <button type="submit" class="btn btn-primary">Valider</button>
+{{-- {{dd($datas)}} --}}
+    <div class="header" id="myHeader">
+        <p>Liste des {{$item}}s</p>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="d-flex flex-row">
+                    <div class="p-2 bd-highlight">
+                        <a data-whatever="@mdo" data-toggle="modal" data-target="#modalCreate" 
+                            class="btn btn-sm btn-success m-btn m-btn--icon m-btn--wide  m--margin-right-10">
+                            <span>
+                                <i class="fa fa-plus mr-2"></i>
+                                <span>Ajouter un Element</span>
+                            </span> 
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="mt-3">
-        <p class="">Type d'intervention :</p>
-        <div class="d-flex ml-5">
-            @foreach ($datas as $data)
-                <p class="mr-1">{{$data['Type_intervention']}}</p>
-                <a href="#"><i class="fas fa-trash-alt mr-5"></i></a>
-                <?php break ?>
-            @endforeach
-        </div>
-        <div class="d-flex">
-            <input type="text" class="form-control" placeholder="Ajouter un élément" style="width: 150px">
-            <button type="submit" class="btn btn-primary">Valider</button>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="table-responsive">
+                <table class="table table-striped m-table table-hover table-sm" id="type_piece_jointes_table">
+                    <thead>
+                    <tr class="">
+                        <th>#</th>
+                        <th>Désignation</th>
+                        <th>Action</th>
+                    </tr>
+                    <?php $a = 1 ?>
+                    @foreach ($datas as $data)
+                    <tr class="">
+                        <th>{{$a}}</th>
+                        <th>{{$datas[$a-1]}}</th>
+                        <th><i class="fas fa-trash-alt" style="color: red"></i></th>
+                    </tr>
+                    <?php $a++ ?>
+                    @endforeach
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
         </div>
     </div>
-    
-    
-    
-      
-</div>
+@endsection
