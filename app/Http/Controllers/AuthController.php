@@ -2,12 +2,17 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Input;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use App\Models\User;
+use Spatie\Permission\Models\Role;
+use Spatie\Permission\Models\Permission;
 
 class AuthController extends Controller {
 
     function logout(){
-        $GLOBALS['auth'] = 0;
+        auth()->logout();
         return view("auth.login");
     }
 
@@ -15,26 +20,33 @@ class AuthController extends Controller {
         return view("auth.login");
     }
 
-    function loginWithData(){
-        $test = request()->validate([
-            'username' => 'required|max:255',
-            'password' => 'required|max:255',
-        ]);
+    function loginWithData(Request $req){
 
-        $attributes = [
-            'username' => $test['username'],
-            'password' => $test['password'],
-        ];
+        $email = $req['email'];
+        $pass = $req['password'];
+    
+        $credentials = array(
+            'email' => $email,
+            'password' => $pass
+        );
+    
+        $auth = Auth::attempt($credentials);
 
-        $jsonData = file_get_contents(public_path('exempleBddAuth.json')); // Lit le fichier JSON
-        $data = json_decode($jsonData, true);
-
-        foreach ($data as $loop) {
-            if ($loop['username'] == $attributes['username'] && $loop['password'] ==  $attributes['password']){
-                $GLOBALS['auth'] = 1;
-                return redirect()->route('gestionnaire.listeDemandeData');
+        if ($auth) {
+            session_start();
+            $usr = User::where("email", "a@gmail.com")->first();
+            // dd($usr);
+            if ($usr->hasRole('admin')) {
+                return redirect('/panelAdmin')->with('succes', 'Vous êtes connecté');
             }
+            return redirect('/ListeDemandeData')->with('succes', 'Vous êtes connecté');
+        } else {
+            return back()
+                ->withErrors([
+                'name' => 'pas bon'
+            ]);
         }
-        return view("auth.login");
     }
+    
+ 
 }

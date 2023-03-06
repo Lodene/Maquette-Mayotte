@@ -35,11 +35,8 @@
                         <i class="fa fa-angle-left"></i>
                     </a>
                 @else
-                    @if(!isset($GLOBALS['auth']))
-                        {{ $GLOBALS['auth'] = 1 }} 
-                    @endif
-                    @if ($GLOBALS['auth'] == 1)
-                        <a class="nav-item-hold button-logout">
+                    @if (auth()->check())
+                        <a class="nav-item-hold button-logout" id="deco">
                             <i class="fas fa-2x fa-sign-out-alt"></i>
                             <span class="nav-text">Déconnexion</span>
                         </a>
@@ -48,13 +45,10 @@
                         </form>
                         <div class="triangle"></div>
                     @else 
-                        <a class="nav-item-hold button-logout">
+                        <a class="nav-item-hold button-logout" href="/">
                             <i class="fas fa-2x fa-sign-in-alt"></i>
                             <span class="nav-text">Connexion</span>
                         </a>
-                        <form id="login-form" action="{{ route('login') }}" method="POST" style="display: none;">
-                            @csrf
-                        </form>
                     @endif
                     
                 @endif
@@ -110,6 +104,7 @@
                     </a>
                     <a href="/adminPage/Etablissement"><i class="fa fa-list" style="color:black;"></i><span class="item-name p-3">Etablissement</span></a>
                     <a href="/adminPage/Zone"><i class="fa fa-list" style="color:black;"></i><span class="item-name p-3">Zone</span></a>
+                    <a href="/panelAdmin"><i class="fa fa-list" style="color:black;"></i><span class="item-name p-3">Panel Admin</span></a>
                     
                 </li>
             </ul>

@@ -6,6 +6,7 @@ use App\Http\Controllers\RddController;
 use App\Http\Controllers\SmController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\AdminController;
+use App\Models\User;
 
 /*
 |--------------------------------------------------------------------------
@@ -48,11 +49,21 @@ Route::get('/ListeDemandeSM', [SmController::class, 'listeDemande'] )->name('SM.
 Route::get('/Demande/{id?}', [SmController::class, 'formulaireDeDemande']);
 
 // Auth
-Route::post('/Logout', [AuthController::class, 'logout'] )->name('logout');
-Route::get('/login', [AuthController::class, 'login'] )->name('login');
-Route::post('/loginWithData', [AuthController::class, 'loginWithData'] )->name('loginWithData');
+Route::post('/Logout', [AuthController::class, 'logout'])->name('logout');
+Route::get('/', function () {
+    return view('auth/login');
+})->name('login');
+
+Route::post('/loginWithData', [AuthController::class, 'loginWithData'])->name('loginWithData');
 
 // Admin
-Route::get('/adminPage/{item?}', [AdminController::class, 'menu'] );
+Route::get('/adminPage/{item?}', [AdminController::class, 'menu'])->middleware(['auth', 'role:admin']);
+Route::get('/panelAdmin', [AdminController::class, 'panelAdmin'])->middleware(['auth', 'role:admin']);
+Route::get('/addRole', [AdminController::class, 'addRole'])->middleware(['auth', 'role:admin']);
+Route::post('/addRolePost', [AdminController::class, 'addRolePost'])->name('addRolePost')->middleware(['auth', 'role:admin']);
 
 
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

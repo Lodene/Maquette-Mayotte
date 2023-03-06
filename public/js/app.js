@@ -98,7 +98,7 @@ $(function() {
         });
     });
 
-    $('body').on('click', '.button-logout', function (e) {
+    $('body').on('click', '#deco', function (e) {
         e.preventDefault();
         var form = $('#logout-form');
         swal({

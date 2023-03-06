@@ -51,4 +51,14 @@
             </div>
         </div>
     </div>
+    <?php 
+        $user = Auth::user();
+
+        // Afficher les noms des rôles de l'utilisateur
+        $roles = $user->getRoleNames();
+        dd($roles);
+        foreach ($roles as $role) {
+            echo $role . "<br>";
+        }
+        ?>
 </div>
