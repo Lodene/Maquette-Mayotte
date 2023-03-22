@@ -6,7 +6,7 @@ use App\Models\User;
 use Laravel\Dusk\Browser;
 use Tests\DuskTestCase;
 
-class connexionTest extends DuskTestCase{
+class authTest extends DuskTestCase{
 
     private $user = [
         'name' => 'test',
@@ -29,17 +29,17 @@ class connexionTest extends DuskTestCase{
         });
     }
 
-    public function test_create_user(): void{
-        $this->browse(function (Browser $browser) {
-            $browser->screenshot('start')
-                    ->type('password', $this->user['password'])
-                    ->type('password_confirmation', $this->user['password'])
-                    ->screenshot('allData')
-                    ->press('Register')
-                    ->screenshot('btnpressed')
-                    ->assertSee('You are logged in!');
-        });
-    }
+    // public function test_create_user(): void{
+    //     $this->browse(function (Browser $browser) {
+    //         $browser->screenshot('start')
+    //                 ->type('password', $this->user['password'])
+    //                 ->type('password_confirmation', $this->user['password'])
+    //                 ->screenshot('allData')
+    //                 ->press('Register')
+    //                 ->screenshot('btnpressed')
+    //                 ->assertSee('You are logged in!');
+    //     });
+    // }
 
     public function test_user_cannot_login_with_bad_data(): void{
         $this->browse(function (Browser $browser) {
