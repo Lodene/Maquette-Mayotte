@@ -37,7 +37,7 @@
                                 <th>{{$usr->id}}</th>
                                 <th>{{$usr->name}}</th>
                                 <th>{{$role}}</th>
-                                <th><i class="fas fa-trash-alt" style="color: red"></i></th>
+                                <th><a href="{{route('delRole', ['user_id' => $usr->id, 'role' => $role]) }}"><i class="fas fa-trash-alt" style="color: red"></i></a></th>
                             </tr>
                         
                         @endforeach

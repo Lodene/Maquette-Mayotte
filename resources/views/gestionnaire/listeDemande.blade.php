@@ -34,23 +34,23 @@
                     </tr>
                     @foreach ($data as $exemple)
                     <?php 
-                        if ($exemple['Statut'] == "En cours" || $exemple['Statut'] == "Terminé" ){
+                        if ($exemple['STATUT'] == "En cours" || $exemple['STATUT'] == "Terminé" ){
                             $action = false;
                         } else {
                             $action = true;
                         }
                     ?>
-                    {{-- {{ dd($exemple['Date_de_creation'])}} --}}
+                    {{-- {{ dd($exemple['EXPRESSION DU BESOIN'])}} --}}
                         <tr>
                             <th>{{ $exemple['Id'] }}</th>
-                            <th>{{ $exemple['Date'] }}</th>
-                            <th>{{ $exemple['Date_derniere_modification'] }}</th>
-                            <th>{{ $exemple['Description_de_la_demande'] }}</th>
-                            <th>{{ $exemple['Statut']  }}</th>
+                            <th>{{ $exemple['DATE DE EXPRESSION DU BESOIN'] }}</th>
+                            <th>{{ $exemple['DATE DERNIERE MODIFICATION'] }}</th>
+                            <th>{{ $exemple['EXPRESSION DU BESOIN'] }}</th>
+                            <th>{{ $exemple['STATUT']  }}</th>
                             <th>{!! $action ? '<i class="fas fa-edit"></i>' : '<i class="fas fa-eye"></i>'!!}</i></th>
                         </tr>
                     @endforeach
-                    </thead>
+                    </thead>    
                 </table>
             </div>
         </div>

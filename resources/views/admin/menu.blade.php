@@ -3,7 +3,7 @@
 @section('content')
 {{-- {{dd($datas)}} --}}
     <div class="header" id="myHeader">
-        <p>Liste des {{$item}}s</p>
+        <p>Liste de l'élement {{$item}}</p>
         <div class="row">
             <div class="col-md-12">
                 <div class="d-flex flex-row">

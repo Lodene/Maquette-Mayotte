@@ -24,7 +24,7 @@ class adminTest extends TestCase{
             ['fruit' => 'orange', 'couleur' => 'orange']
         ];
         $jsonData = json_encode($data);
-        file_put_contents(public_path('data.json'), $jsonData);
+        file_put_contents(public_path('dataTEST.json'), $jsonData);
 
         // Appelle la fonction à tester
         $response = $controller->menu('fruit');
@@ -37,12 +37,11 @@ class adminTest extends TestCase{
         $this->assertEquals('fruit', $response->getData()['item']);
 
         // Nettoie les données de test
-        unlink(public_path('data.json'));
+        unlink(public_path('dataTEST.json'));
     }
 
 
-    public function testAddRoleReturnsViewWithData()
-    {
+    public function testAddRoleReturnsViewWithData(){
         $controller = new AdminController();
 
         // Crée des données de test
@@ -74,8 +73,7 @@ class adminTest extends TestCase{
         $role2->delete();
     }
     
-    public function testAddRolePostAddsRoleIfUserDoesNotHaveIt()
-    {
+    public function testAddRolePostAddsRoleIfUserDoesNotHaveIt(){
         $controller = new AdminController();
     
         // Crée des données de test

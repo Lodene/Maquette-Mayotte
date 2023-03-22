@@ -19,16 +19,13 @@ use App\Models\User;
 |
 */
 
-Route::get('/', function () {
-    session_start();
+//welcome
+Route::get('welcome', function () {
     return view('welcome');
 });
 
-// Gestionnaire
 
-// Route::get('ListeDemandeGestionnaire', function () {
-//     return view('gestionnaire/listeDemande');
-// })->name('gestionnaire.listeDemande');
+// Gestionnaire
 
 Route::get('/ListeDemandeData', [GestionnaireController::class, 'listeDemande'] )->name('gestionnaire.listeDemandeData');
 
@@ -60,6 +57,7 @@ Route::post('/loginWithData', [AuthController::class, 'loginWithData'])->name('l
 Route::get('/adminPage/{item?}', [AdminController::class, 'menu'])->middleware(['auth', 'role:admin']);
 Route::get('/panelAdmin', [AdminController::class, 'panelAdmin'])->middleware(['auth', 'role:admin']);
 Route::get('/addRole', [AdminController::class, 'addRole'])->middleware(['auth', 'role:admin']);
+Route::get('/delRole/{user_id}/roles/{role}', [AdminController::class, 'delRole'])->middleware(['auth', 'role:admin'])->name("delRole");
 Route::post('/addRolePost', [AdminController::class, 'addRolePost'])->name('addRolePost')->middleware(['auth', 'role:admin']);
 
 

@@ -1,11 +1,10 @@
 @extends('layouts.app')
 @section('title', 'Formulaire Nouvelle Demande')
 @section('content')
-<div class="main-content-wrap sidenav-open d-flex flex-column content-center">
     <div class="header">
         <p>Nouvelle Demande</p>
     </div>
-    <div class="">
+    <div class="" >
         <div class="row">
             <div class="col-md-4">
                 <div class="form-group">
@@ -51,14 +50,4 @@
             </div>
         </div>
     </div>
-    <?php 
-        $user = Auth::user();
-
-        // Afficher les noms des rôles de l'utilisateur
-        $roles = $user->getRoleNames();
-        dd($roles);
-        foreach ($roles as $role) {
-            echo $role . "<br>";
-        }
-        ?>
-</div>
+@endsection

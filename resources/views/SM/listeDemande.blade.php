@@ -36,19 +36,19 @@
                     </tr>
                     @foreach ($data as $exemple)
                     <?php
-                    if($exemple['Statut'] == "Terminé" || $exemple['Statut'] == "A traiter") {
+                    if($exemple['STATUT'] == "Terminé" || $exemple['STATUT'] == "A traiter") {
                         continue;
                     }
                     ?>
                     {{-- {{ dd($exemple['Date_de_creation'])}} --}}
                         <tr>
                             <th>{{ $exemple['Id'] }}</th>
-                            <th>{{ $exemple['Date'] }}</th>
-                            <th>{{ $exemple['Gestionnaire'] }}</th>
-                            <th>{{ $exemple['Rdd'] }}</th>
-                            <th>{{ $exemple['Etablissement'] }}</th>
-                            <th>{{ $exemple['Description_de_la_demande'] }}</th>
-                            <th>{{ $exemple['Statut']  }}</th>
+                            <th>{{ $exemple['DATE DE EXPRESSION DU BESOIN'] }}</th>
+                            <th>{{ $exemple['RRM'] }}</th>
+                            <th>{{ $exemple['RRM'] }}</th>
+                            <th>{{ $exemple['ETABLISSEMENT'] }}</th>
+                            <th>{{ $exemple['EXPRESSION DU BESOIN'] }}</th>
+                            <th>{{ $exemple['STATUT']  }}</th>
                             <th><a href="/Demande/{{$exemple['Id']}}"><i class="fas fa-edit"></i></a></th>
                         </tr>
                     @endforeach
@@ -96,21 +96,21 @@
                     </tr>
                     @foreach ($data as $exemple)
                     <?php
-                    if($exemple['Statut'] != "Terminé") {
+                    if($exemple['STATUT'] != "En cours") {
                         continue;
                     }
                     ?>
                     {{-- {{ dd($exemple['Date_de_creation'])}} --}}
                         <tr>
                             <th>{{ $exemple['Id'] }}</th>
-                            <th>{{ $exemple['Date'] }}</th>
-                            <th>{{ $exemple['Gestionnaire'] }}</th>
-                            <th>{{ $exemple['Rdd'] }}</th>
-                            <th>{{ $exemple['Etablissement'] }}</th>
-                            <th>{{ $exemple['Description_de_la_demande']  }}</th>
-                            <th>{{ $exemple['Statut']  }}</th>
-                            <th>{{ $exemple['Note']  }}</th>
-                            <th>{{ $exemple['Cout_total']  }}</th>
+                            <th>{{ $exemple['DATE DE EXPRESSION DU BESOIN'] }}</th>
+                            <th>{{ $exemple['RRM'] }}</th>
+                            <th>{{ $exemple['RRM'] }}</th>
+                            <th>{{ $exemple['ETABLISSEMENT'] }}</th>
+                            <th>{{ $exemple['EXPRESSION DU BESOIN']  }}</th>
+                            <th>{{ $exemple['STATUT']  }}</th>
+                            <th>{{ $exemple['Note Priorité']  }}</th>
+                            <th>{{ $exemple['Prévisionnel CP 2022']  }}</th>
                             <th><i class="fas fa-eye"></i></th>
                         </tr>
                     @endforeach

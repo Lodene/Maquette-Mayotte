@@ -55,4 +55,14 @@ class AdminController extends Controller
             ]);;
         }
     }
+
+    public function delRole($user_id, $role){
+        $user = User::find($user_id);
+        $user->removeRole($role);
+        
+        return view ("admin/panelAdmin", [
+            'datas' => User::all()
+        ]);
+
+    }
 }

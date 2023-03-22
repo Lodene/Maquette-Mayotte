@@ -34,8 +34,8 @@ class AuthController extends Controller {
 
         if ($auth) {
             session_start();
+            dd($auth);
             $usr = User::where("email", "a@gmail.com")->first();
-            // dd($usr);
             if ($usr->hasRole('admin')) {
                 return redirect('/panelAdmin')->with('succes', 'Vous êtes connecté');
             }
