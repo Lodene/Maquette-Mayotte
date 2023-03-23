@@ -22,7 +22,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col.md-4">
+            <div class="col-md-4">
                 <div class="form-group mt-2">
                     <div>
                         <label for="test">Role :</label>
@@ -39,7 +39,7 @@
             <div class="col-md-4">
                 <div class="form-group " style="margin-top: 30px">
                     <div>
-                        <button type="submit" class="btn btn-primary">Valider</button>
+                        <button type="submit" id="submitAddRole" class="btn btn-primary">Valider</button>
                     </div>
                 </div>
             </div>
